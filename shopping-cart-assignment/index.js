@@ -15,7 +15,7 @@ const roundUp = (value) => Math.ceil(value * 100) / 100;
 const getProductPrice = async (productName) => {
     try {
         const response = await axios.get(`${priceApiUrl}${productName}`);
-        console.log(response.data.price);
+        // console.log(response.data.price);
         return response.data.price;
     } catch (error) {
         throw new Error(`Product not found: ${productName}`);
@@ -26,9 +26,9 @@ app.post('/cart/add', async (req, res) => {
     const { productName, quantity } = req.body;
 
     try {
-        console.log("before price");
+        // console.log("before price");
         const price = await getProductPrice(productName);
-        console.log("after price");
+        // console.log("after price");
         const existingProduct = cart.find(item => item.productName === productName);
         
         if (existingProduct) {
