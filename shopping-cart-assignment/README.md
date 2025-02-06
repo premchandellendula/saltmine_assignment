@@ -79,4 +79,4 @@ The below is a sample with the correct values you can use to confirm your calcul
 
 ### ADDED CODE
 * Added a add to cart data api, which takes in productName and quantity
-* Created another api for calculating total amount of the list of items in it with applied tax 
+* Created another api for calculating total amount of the list of items in it with applied tax on all items 
